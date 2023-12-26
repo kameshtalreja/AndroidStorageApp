@@ -1,0 +1,16 @@
+-> SOlID Principles
+
+SOLID is an acronym for five design principles in Object-Oriented software development intended to make software designs more understandable, flexible and maintainable. These five principles are described by Robert C. Martin. SOLID principles are briefly as follows:
+
+1. Single Responsibility Principle
+each class should focus on doing one thing and doing it well.
+
+
+2. Open Closed Principle
+The Open-Closed Principle suggests that a class should be open for extension but closed for modification. In Android, this means you should be able to add new features without changing existing code.
+
+
+3. Liskov's Substitution Principle
+4. Interface Segregation Principle
+5. Dependency Inversion Principle
+

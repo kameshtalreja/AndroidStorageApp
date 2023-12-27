@@ -57,6 +57,8 @@ class MainActivity : ComponentActivity() {
                 }
             }
             print("message print for commit 2")
+
+        print("message for 4th commit")
         }
     }
 }

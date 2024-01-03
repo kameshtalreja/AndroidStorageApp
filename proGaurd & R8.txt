@@ -1,0 +1,35 @@
+
+Both ProGaurd and R8 are tools to optimize and obfuscate the code.
+
+Optimize : is remote all the unused Classes, Functions and field of project and also from the libraries
+which has been used in project.
+Obfuscate : means is this tool wil change the names of all the classes, functions and fields of the project.
+
+how to enable it ?
+     isMinifyEnabled = true
+you need to set the true of minifyEnabled field. it will optimize the code.
+
+
+how to optimize the Resources ?
+    shrinkResources = true
+you need to set the true of shrinkResources field.
+
+how to ignore the obfuscation on file ?
+you can use @keep annotation before the class name.
+
+how to set the rules in proGaurd file ?
+
+-keep class com.kamesh.pkg.data.*
+you can keep all the classes of package or one
+
+-keep class com.kamesh.pkg.data.* { funcation/class }
+under brackets those functions and class we declare will not be obfuscate.
+
+
+how to check the original name of obfuscated class in android ?
+we have a map file of those classes in app/build/outputs/mapping/release or debug/mapping.txt
+this help us in case if we face a crash on production app.
+
+
+
+

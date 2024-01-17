@@ -1,0 +1,12 @@
+
+var : it's used to create mutable variable in kotlin
+
+val : is used to create immutable type(can't changed the value) variable.
+can also assign the value on run time
+
+val const :
+should be primitive type or String
+const are used const are compile time constants
+should declare before the compile time
+should not create within a function or within a class
+can't be create in function

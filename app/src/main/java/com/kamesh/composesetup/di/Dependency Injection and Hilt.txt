@@ -1,0 +1,24 @@
+
+
+Dependency Injection
+
+-DI in programming pattern that help and manage how components(classes/objects) get the dependencies they need
+to function.
+-instead of component creating  their own dependencies, dependencies are provided from outside(injected) to promote
+flexibility and maintainability
+-decouples
+-enhance testability
+-promote reusability
+
+Hilt
+
+what is difference between @binds and @provides ?
+
+@bind tell dagger to understand the relationship between the interface/abstract and it's implementation, while
+@provide tells dagger how to create and provide  instance of a particular class. they are both tools in dagger for
+managing dependency injection.
+
+provide
+-it used to define methods within a dagger module that provide instances of objects.
+it's used when you want to explicitly specify how to create and provide instance of particular type.
+

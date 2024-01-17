@@ -8,4 +8,5 @@ interface  MovieDBApi {
 
     @GET("topstories/v2/home.json")
     suspend fun getArticles(@Query("api-key") key: String) : ArticalsDTO
+
 }

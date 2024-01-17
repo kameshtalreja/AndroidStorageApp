@@ -16,24 +16,48 @@
         android:theme="@style/Theme.ComposeSetup"
         tools:targetApi="31">
         <activity
-            android:name=".intent_.SecondActivity"
+            android:name=".patterns.PatternActivity"
             android:exported="true"
-            android:label="@string/title_activity_second"
+            android:label="@string/title_activity_pattern"
             android:theme="@style/Theme.ComposeSetup" >
+
+
+        </activity>
+        <activity
+            android:name=".intent_.FirstActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
         </activity>
-
+        <activity
+            android:name=".memoryleak.MainLeakActivity2"
+            android:exported="false"
+            android:label="Leak2"
+            android:theme="@style/Theme.ComposeSetup" />
+        <activity
+            android:name=".memoryleak.MainLeakActivity"
+            android:exported="true"
+            android:label="Leak1"
+            android:theme="@style/Theme.ComposeSetup"></activity>
+        <activity
+            android:name=".intent_.SecondActivity"
+            android:exported="true"
+            android:label="@string/title_activity_second"
+            android:theme="@style/Theme.ComposeSetup" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.ComposeSetup">
-
-        </activity>
+            android:theme="@style/Theme.ComposeSetup" />
     </application>
 
 </manifest>

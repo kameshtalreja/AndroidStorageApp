@@ -22,7 +22,7 @@ class SecondActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting2("Android")
+                    Greeting2("Second Activity")
                 }
             }
         }

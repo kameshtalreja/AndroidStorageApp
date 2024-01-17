@@ -1,8 +1,15 @@
 
-Single Design Pattern
+- Creational
+Singleton Design Pattern
 Builder Design Pattern
 Factory Design Pattern
 
+- Behavioral
 Observer Design Pattern
+Observer is pattern where where an Object, known as the subject, maintain the list of dependents, called observers,
+that are notified of any changes in the subject's state.
+This pattern is commonly used in implementing distributed event handling systems.
 
+- Structural
 Adapter Design Pattern
+

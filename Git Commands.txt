@@ -1,0 +1,22 @@
+
+
+init : create an empty git repository / initialisation
+git add  : file contents to the index
+
+git log :  get all the commits with hash
+git log —a : to see all of commits
+git revert hash_id : remove that changes commit change and provide new hash with old changes
+git checkout hash_id : to checkout in particular commit and leave the current stage
+git stash  :  non committed changes can save temporary in stash
+git stash list : to view list of stash’s
+git stash apply : will apply the stash changes in commit.
+
+
+git branch ‘branch_name’ : to create a new branch
+git checkout ‘branch_name’ : to checkout from current branch to any other branch
+
+
+
+difference between pull and fetch?
+
+difference between merge and rebase ?

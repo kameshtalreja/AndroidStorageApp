@@ -1,0 +1,14 @@
+
+Coroutine :
+a coroutine is concurrency design pattern that you can use on android to simplify the code that
+execute asynchronously.
+-> help to run long running task that might be block main thread and cause to you app to become unresponsive
+
+recommended for asynchronously
+
+-> Lightweight : You can run many coroutines on a single thread due to support for suspension, which
+doesn't block the thread where the coroutine is running. Suspending saves memory over blocking while
+supporting many concurrent operations.
+
+-> Fewer Memory leaks
+-> Jetpack integration : some libraries also provide own coroutine scopes that you can use for structured concurrency.

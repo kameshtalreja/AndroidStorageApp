@@ -1,5 +1,9 @@
 package com.kamesh.composesetup.solid
 
+/**
+ * here because of abstraction (interface or abstract class) we can create new extension of version control
+ * but don't require to change the OSDetail functionality because it's depend on abstraction not the extension of functionality
+ * */
 interface VersionController {
     fun passOSVersion() : Int
 }

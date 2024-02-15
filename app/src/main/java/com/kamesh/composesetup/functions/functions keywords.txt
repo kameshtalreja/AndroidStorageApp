@@ -8,6 +8,25 @@ part of functional programming and allows you to treat functions as first-class 
 reusable code.
 
 
-Scope Function : Scope functions are functions in the Kotlin standard library whose purpose is to execute a block of code within the context of an object. It provides
-a temporary scope when you call the function on the object with a lambda expression. In this scope, the function can access the object without its name. There are
-five scope functions.
+inner function : In Kotlin, inner functions are functions defined inside another function. They have access to the variables of the outer function.
+
+Extension Function : Allow you to add new functions to existing class without modifying their source code.
+these function are defied outside the class they extend but you can called as if they were member function
+of the class.
+syntax : ClassName.extensionFunction(parameters) : ReturnType{}
+-they are defied outside the class they extend.
+-they do not have access to private members of the class.
+
+
+
+infix function : an infix is function that marketed with the 'infix' keyword. These functions allow you
+to call them using infix notation, which means you can call them without using the traditional dot-annotation
+ or parentheses. the function should have single parameter, and it must be defined as member or extension
+ function.
+ - improved readability
+ - Conciseness
+
+ syntax : infix fun ClassName.InfixFunction(parameter) : ReturnType{}
+
+
+ reified

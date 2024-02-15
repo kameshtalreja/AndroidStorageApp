@@ -1,7 +1,4 @@
 
-Scope functions :
-
-
-
-Let :
-Also :
+Scope Function : Scope functions are functions in the Kotlin standard library whose purpose is to execute a block of code within the context of an object. It provides
+a temporary scope when you call the function on the object with a lambda expression. In this scope, the function can access the object without its name. There are
+five scope functions.

@@ -16,25 +16,37 @@
         android:theme="@style/Theme.ComposeSetup"
         tools:targetApi="31">
         <activity
-            android:name=".patterns.PatternActivity"
+            android:name=".StartActivity"
             android:exported="true"
-            android:label="@string/title_activity_pattern"
+            android:label="@string/title_activity_start"
             android:theme="@style/Theme.ComposeSetup" >
-
-
-        </activity>
-        <activity
-            android:name=".intent_.FirstActivity"
-            android:exported="true"
-            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".compose.ComposableActivity"
+            android:exported="false"
+            android:label="@string/title_activity_composable"
+            android:theme="@style/Theme.ComposeSetup">
+
+        </activity>
+        <activity
+            android:name=".patterns.PatternActivity"
+            android:exported="false"
+            android:label="@string/title_activity_pattern"
+            android:theme="@style/Theme.ComposeSetup" />
+        <activity
+            android:name=".intent_.FirstActivity"
+            android:exported="false"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
@@ -47,7 +59,7 @@
             android:name=".memoryleak.MainLeakActivity"
             android:exported="true"
             android:label="Leak1"
-            android:theme="@style/Theme.ComposeSetup"></activity>
+            android:theme="@style/Theme.ComposeSetup" />
         <activity
             android:name=".intent_.SecondActivity"
             android:exported="true"

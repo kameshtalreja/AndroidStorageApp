@@ -30,7 +30,6 @@ class Marker() {
 class PenAdapter() : Pen {
 
     var market = Marker()
-
     override fun write(task: String) {
         market.using(task)
     }

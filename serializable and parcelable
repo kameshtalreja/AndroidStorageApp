@@ -1,0 +1,17 @@
+
+
+
+Serializable and Parcelable are two interfaces that can be used to pass data between components, such as activities and fragments, or to persist data. Both interfaces
+serve similar purposes, but they have some differences in terms of performance and implementation.
+
+Serializable
+-> Serializable is a marker interface that indicates that a class can be serialized.
+Serialization is the process of converting an object into a byte stream, which can then be easily reconstructed.
+-> To make a class serializable, you simply need to implement the Serializable interface, and no additional methods are required.
+-> While Serializable is easy to use, it might not be the most efficient option in terms of performance, especially for large or complex objects.
+
+Parcelable
+-> Parcelable is a more Android-specific interface that is designed for efficient interprocess communication, such as passing data between activities or fragments.
+-> Unlike Serializable, implementing Parcelable requires more effort, as you need to write custom serialization and deserialization code. However, it can lead to better
+performance, especially when dealing with large amounts of data.
+-> Parcelable is recommended for situations where performance is a concern, such as when passing complex objects between components frequently.

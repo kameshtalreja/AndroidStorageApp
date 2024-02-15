@@ -1,0 +1,20 @@
+
+
+* Name::class.java and Name::class
+
+By using ::class, you get an instance of KClass. It is Kotlin Reflection API, that can handle Kotlin features like properties, data classes, etc.
+By using ::class.java, you get an instance of Class. It is Java Reflection API, that interops with any Java reflection code, but can't work with some Kotlin features.
+reflection : In simple words, it gives you the ability to get the code you have written i.e., the class name you have defined, the function name you have defined, etc. Everything you have written, you can access all these at runtime using Reflection.
+
+below is normal code
+-> val a = MyClass::class
+
+can be interpreted as
+-> val a = KClass<MyClass>()
+
+Note: Above code is not syntactically correct, because KClass is an interface and interfaces cannot be instantiated. It is just to give you an idea.
+
+
+
+
+sealed class

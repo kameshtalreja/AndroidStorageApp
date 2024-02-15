@@ -11,6 +11,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
 import javax.inject.Inject
@@ -29,11 +30,14 @@ class HomeViewModel @Inject constructor(
         getArticles()
     }
     fun getArticles(){
-        articleUsecase().onEach { result->
+        articleUsecase()
+
+            .onEach { result->
             when(result){
                 is Resources.Success -> {
 
                     Log.d(TAG, "getArticles: result.data!!")
+
                     _articlesList.value = result.data!!
 
                 }

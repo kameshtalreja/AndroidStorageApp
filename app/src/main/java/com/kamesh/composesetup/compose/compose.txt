@@ -1,9 +1,0 @@
-
-
-
-
-Hoisting In Compose : hoisting refers to the practice of moving the management of state or behavior from a child composable to a parent composable. This is
-done to make the child composable more reusable and configurable by allowing the parent to control and provide necessary data or callbacks. Hoisting helps in creating
-composable functions that are more flexible and can be used in different contexts by lifting the responsibility of certain aspects, like state handling, to higher levels
-in the composable hierarchy.
-

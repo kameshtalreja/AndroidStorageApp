@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">ComposeSetup</string>
-    <string name="title_activity_second">SecondActivity</string>
-    <string name="title_activity_pattern">PatternActivity</string>
-    <string name="title_activity_composable">ComposableActivity</string>
-    <string name="title_activity_start">StartActivity</string>
-</resources>

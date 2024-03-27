@@ -11,8 +11,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.lifecycleScope
 import com.kamesh.androidstorageapp.ui.theme.AndroidStorageAppTheme
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.IOException
 
@@ -32,6 +34,12 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    private fun loadImagesFromInternalStorageToList() {
+        lifecycleScope.launch {
+            val images = loadPhotosFromInternalStorage()
+
+        }
+    }
 
     private fun deletePhotoFromInternalStorage(filename : String) : Boolean {
         return try {

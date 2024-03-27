@@ -1,11 +1,52 @@
 
 
+Jepack Compose Navigation
+it's library of jetpack compose
+it offer declarative way to handle navigation
+compose navigation allow you to define your app navigation structure using compose function and annotations
 
-jetpack navigation have
+important components
 
-NavHostController
+NavHost -> A composable that hosts the navigation graph for your app, it define the navigation entry
+points and is typically placed at the root of your hierarchy. your can have multiple navHost in your app.
 
-NavGraph
+NavController : a controller to manage navigation in you app. it track the current destination and back stack
+and provide methods for navigation between destinations and passing arguments.
+
+
+
 
 rememberNavHostController : is a function used to retaining the state of a 'NavController'
 across configuration changes.
+
+
+
+Arguments
+There are two types of argument we can pass between jetpack screens.
+1. Required
+2. Optional
+
+-> required arguments : to pass required argument follow below steps
+
+i. set the name of args with route in via direct or from sealed class
+ eg. detail_screen/{$ARG_1}/{$ARG_NAME} (here we are passing 2 args
+
+ii. define the args name & types in composable within arguments passing through listOfArguments.
+ eg. navArgument(ARG_1){ type = NavType.IntType }
+
+iii. get the arguments inside composable content place which you can check with 'it.arguments'
+ eg. it.arguments?.getInt(ARG_1)
+
+
+-> Optional arguments : to pass the optional arguments follow below steps
+
+i. set the name of args with route in via direct or from sealed class
+ eg. detail_screen?$ARG_1={$ARG_1}&{$ARG_NAME} (here we are passing 2 args)
+
+ii. define the args name & types in composable within arguments passing through listOfArguments.and can
+also set default value or set nullable.
+  eg. navArgument(ARG_1){ type = NavType.IntType defaultValue = 0}
+
+iii. get the arguments inside composable content place which you can check with 'it.arguments'
+ eg. it.arguments?.getInt(ARG_1)
+

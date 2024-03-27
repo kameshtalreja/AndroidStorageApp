@@ -1,4 +1,4 @@
-package com.kamesh.composenoteapp.data.local.dto
+package com.kamesh.composenoteapp.data.local.room
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

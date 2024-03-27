@@ -1,0 +1,11 @@
+
+
+
+jetpack navigation have
+
+NavHostController
+
+NavGraph
+
+rememberNavHostController : is a function used to retaining the state of a 'NavController'
+across configuration changes.

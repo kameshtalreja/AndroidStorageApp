@@ -1,5 +1,6 @@
 package com.kamesh.androidstorageapp
 
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -28,7 +29,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    MainScreen()
                 }
             }
         }
@@ -58,6 +59,20 @@ class MainActivity : ComponentActivity() {
                 val bitmap = BitmapFactory.decodeByteArray(bytes,0,bytes.size)
                 InternalStorageImages(it.name,bitmap)
             } ?: listOf()
+        }
+    }
+
+    private fun saveImageToInternalStorage(filename: String,bitmap: Bitmap) : Boolean {
+        return try {
+            openFileOutput("$filename.jpg", MODE_PRIVATE).use { stream ->
+                if (!bitmap.compress(Bitmap.CompressFormat.JPEG,95,stream)) {
+                    throw IOException("Couldn't save bitmap.")
+                }
+            }
+            true
+        } catch (e : IOException) {
+            e.printStackTrace()
+            false
         }
     }
 }
